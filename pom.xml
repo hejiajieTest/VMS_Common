@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.tscloud</groupId>
+  <artifactId>VMS_Common</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>VMS_Common</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+  	<jsr311-api.version>1.1.1</jsr311-api.version>
+  	<fastjson.version>1.2.4</fastjson.version>
+  	<log4j.version>1.2.17</log4j.version>
+  	<slf4j.version>1.7.26</slf4j.version>
+  	<commons-lang.version>2.6</commons-lang.version>
+  	<commons-logging.version>1.2</commons-logging.version>
+  	<commons-io.version>2.4</commons-io.version>
+  	<commons-net.version>3.3</commons-net.version>
+  	<commons-codec.version>1.10</commons-codec.version>
+  	<guava.version>18.0</guava.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  
+  	<!-- restful风格jar包 -->
+	<dependency>
+	    <groupId>javax.ws.rs</groupId>
+	    <artifactId>jsr311-api</artifactId>
+	    <version>${jsr311-api.version}</version>
+	</dependency>
+	<!-- httpRequest HttpServletResponse -->
+	<dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>servlet-api</artifactId>
+	        <version>2.5</version>
+	        <scope>provided</scope>
+    </dependency> 
+    <!-- JSON start -->
+     <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+      <!-- JSON end -->
+      <!--log4j start-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+     <!-- log4j end -->
+     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>${slf4j.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>${slf4j.version}</version>
+		</dependency>
+		  <!--commons-->
+  	        <!-- 日期格式化 -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        <!-- 日志 -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>${commons-net.version}</version>
+        </dependency>
+  	<!-- 加密解密 -->
+        <dependency>
+         <groupId>commons-codec</groupId>
+         <artifactId>commons-codec</artifactId>
+         <version>${commons-codec.version}</version>
+        </dependency>
+     <!--guava start -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <!--guava end-->
+  </dependencies>
+  
+   <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
+    <build>
+	    <finalName>VMS_Common</finalName>
+	   
+  </build>
+</project>
